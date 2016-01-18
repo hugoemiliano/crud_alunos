@@ -1,0 +1,9 @@
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\obj\Debug\CRUD_Alunos.csprojResolveAssemblyReference.cache
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\obj\Debug\CRUD_Alunos.frm_Crud.resources
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\obj\Debug\CRUD_Alunos.Properties.Resources.resources
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\obj\Debug\CRUD_Alunos.csproj.GenerateResource.Cache
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\bin\Debug\CRUD_Alunos.exe.config
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\bin\Debug\CRUD_Alunos.exe
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\bin\Debug\CRUD_Alunos.pdb
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\obj\Debug\CRUD_Alunos.exe
+d:\users\hugoemiliano\documents\visual studio 2015\Projects\CRUD_Alunos\CRUD_Alunos\obj\Debug\CRUD_Alunos.pdb
