@@ -45,13 +45,26 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgEdit = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgExcluir = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tbPesquisa = new System.Windows.Forms.TextBox();
+            this.rbCodigo = new System.Windows.Forms.RadioButton();
+            this.rbNome = new System.Windows.Forms.RadioButton();
+            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.dgPesquisa = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.Status.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEdit)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgExcluir)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPesquisa)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -81,64 +94,72 @@
             this.toolStripSeparator1,
             this.btnPesquisar,
             this.btnSair});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 19);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 5);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(990, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(990, 53);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCadastrar.AutoSize = false;
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(36, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(100, 50);
             this.btnCadastrar.Text = "Cadastrar Aluno ";
+            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEditar.AutoSize = false;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(36, 36);
+            this.btnEditar.Size = new System.Drawing.Size(100, 50);
             this.btnEditar.Text = "Editar Aluno ";
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExcluir.AutoSize = false;
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(36, 36);
+            this.btnExcluir.Size = new System.Drawing.Size(100, 50);
             this.btnExcluir.Text = "Excluir Aluno ";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnPesquisar.AutoSize = false;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(36, 36);
+            this.btnPesquisar.Size = new System.Drawing.Size(100, 50);
             this.btnPesquisar.Text = "Pesquisar Aluno";
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // btnSair
             // 
             this.btnSair.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSair.AutoSize = false;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSair.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(36, 36);
+            this.btnSair.Size = new System.Drawing.Size(100, 50);
             this.btnSair.Text = "Sair do Sistema";
+            this.btnSair.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // Status
@@ -176,6 +197,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -184,43 +206,135 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(979, 446);
+            this.tabPage1.Size = new System.Drawing.Size(979, 445);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Adicionar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Controls.Add(this.dgEdit);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(979, 446);
+            this.tabPage2.Size = new System.Drawing.Size(979, 445);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Editar Aluno";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
+            // 
+            // dgEdit
+            // 
+            this.dgEdit.AllowUserToAddRows = false;
+            this.dgEdit.AllowUserToDeleteRows = false;
+            this.dgEdit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgEdit.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgEdit.Location = new System.Drawing.Point(5, 120);
+            this.dgEdit.Name = "dgEdit";
+            this.dgEdit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgEdit.Size = new System.Drawing.Size(967, 323);
+            this.dgEdit.TabIndex = 1;
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Controls.Add(this.dgExcluir);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(979, 446);
+            this.tabPage3.Size = new System.Drawing.Size(979, 445);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Excluir Aluno";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
+            // 
+            // dgExcluir
+            // 
+            this.dgExcluir.AllowUserToAddRows = false;
+            this.dgExcluir.AllowUserToDeleteRows = false;
+            this.dgExcluir.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgExcluir.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgExcluir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgExcluir.Location = new System.Drawing.Point(5, 120);
+            this.dgExcluir.Name = "dgExcluir";
+            this.dgExcluir.ReadOnly = true;
+            this.dgExcluir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgExcluir.Size = new System.Drawing.Size(967, 323);
+            this.dgExcluir.TabIndex = 2;
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Controls.Add(this.tbPesquisa);
+            this.tabPage4.Controls.Add(this.rbCodigo);
+            this.tabPage4.Controls.Add(this.rbNome);
+            this.tabPage4.Controls.Add(this.btnPesquisa);
+            this.tabPage4.Controls.Add(this.dgPesquisa);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(979, 446);
+            this.tabPage4.Size = new System.Drawing.Size(979, 445);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Pesquisar Aluno";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tbPesquisa
+            // 
+            this.tbPesquisa.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPesquisa.Location = new System.Drawing.Point(6, 55);
+            this.tbPesquisa.Name = "tbPesquisa";
+            this.tbPesquisa.Size = new System.Drawing.Size(455, 26);
+            this.tbPesquisa.TabIndex = 4;
+            // 
+            // rbCodigo
+            // 
+            this.rbCodigo.AutoSize = true;
+            this.rbCodigo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCodigo.Location = new System.Drawing.Point(697, 57);
+            this.rbCodigo.Name = "rbCodigo";
+            this.rbCodigo.Size = new System.Drawing.Size(99, 21);
+            this.rbCodigo.TabIndex = 3;
+            this.rbCodigo.Text = "Por Código";
+            this.rbCodigo.UseVisualStyleBackColor = true;
+            // 
+            // rbNome
+            // 
+            this.rbNome.AutoSize = true;
+            this.rbNome.Checked = true;
+            this.rbNome.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNome.Location = new System.Drawing.Point(825, 56);
+            this.rbNome.Name = "rbNome";
+            this.rbNome.Size = new System.Drawing.Size(92, 21);
+            this.rbNome.TabIndex = 2;
+            this.rbNome.TabStop = true;
+            this.rbNome.Text = "Por Nome";
+            this.rbNome.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisa
+            // 
+            this.btnPesquisa.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisa.Location = new System.Drawing.Point(484, 54);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(137, 26);
+            this.btnPesquisa.TabIndex = 1;
+            this.btnPesquisa.Text = "Pesquisar";
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
+            // 
+            // dgPesquisa
+            // 
+            this.dgPesquisa.AllowUserToAddRows = false;
+            this.dgPesquisa.AllowUserToDeleteRows = false;
+            this.dgPesquisa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgPesquisa.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPesquisa.Location = new System.Drawing.Point(6, 117);
+            this.dgPesquisa.Name = "dgPesquisa";
+            this.dgPesquisa.ReadOnly = true;
+            this.dgPesquisa.Size = new System.Drawing.Size(967, 323);
+            this.dgPesquisa.TabIndex = 0;
             // 
             // frm_Crud
             // 
@@ -246,6 +360,13 @@
             this.Status.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgEdit)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgExcluir)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPesquisa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,6 +390,13 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataGridView dgEdit;
+        private System.Windows.Forms.DataGridView dgExcluir;
+        private System.Windows.Forms.TextBox tbPesquisa;
+        private System.Windows.Forms.RadioButton rbCodigo;
+        private System.Windows.Forms.RadioButton rbNome;
+        private System.Windows.Forms.Button btnPesquisa;
+        private System.Windows.Forms.DataGridView dgPesquisa;
     }
 }
 

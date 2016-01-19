@@ -147,22 +147,106 @@ namespace CRUD_Alunos
         #endregion
 
         #region "Método Delete"
-        public bool Delete()
+                
+        public bool Delete(int id_aluno)
         {
-            return false;
+            vsql = "DELETE CRUD_ALUNOS WHERE ID_ALUNO = @ID_ALUNO";
+
+            SqlCommand objcmd = null;
+
+            if (this.conectar())
+            {
+                try
+                {
+                    objcmd = new SqlCommand(vsql, objCon);
+                    objcmd.Parameters.AddWithValue("@ID_ALUNO", id_aluno);
+                    objcmd.ExecuteNonQuery();
+
+                    return true;
+                }
+                catch (SqlException sqlerr)
+                {
+                    throw sqlerr;
+                }
+                finally
+                {
+                    this.desconectar();
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
         #endregion
+
         #endregion
 
         #region "Métodos de listagem de grid e pesquisar"
         public DataTable ListaGrid()
-        {
-            return null;
+        { 
+            vsql = "SELECT [ID_ALUNO] as Código, [NOME] as Nome, [IDADE] as Idade, [ENDERECO]as Endereço, [TELEFONE] as Fone, [EMAIL] as Email FROM CRUD_ALUNOS";
+
+            SqlCommand objcmd = null;
+
+            if (this.conectar())
+            {
+                try
+                {
+                    objcmd = new SqlCommand(vsql, objCon);
+
+                    SqlDataAdapter adp = new SqlDataAdapter(objcmd);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+
+                    return dt;
+                }
+                catch (SqlException sqlerr)
+                {
+                    throw sqlerr;
+                }
+                finally
+                {
+                    this.desconectar();
+                }
+            }
+            else
+            {
+                return null; 
+            }
         }
 
-        public DataTable Pesquisar()
+        public DataTable Pesquisar(string sql, string param)
         {
-            return null;
+            this.vsql = sql;
+
+            SqlCommand objcmd = null;
+
+            if (this.conectar())
+            {
+                try
+                {
+                    objcmd = new SqlCommand(vsql, objCon);
+                    objcmd.Parameters.Add(new SqlParameter("@VALOR", param));
+                    SqlDataAdapter adp = new SqlDataAdapter(objcmd);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+
+                    return dt;
+                }
+                catch (SqlException sqlerr)
+                {
+                    throw sqlerr;
+                }
+                finally
+                {
+                    this.desconectar();
+                }
+            }
+            else
+            {
+                return null;
+            }            
         }
         #endregion
     }
